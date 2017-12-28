@@ -93,6 +93,7 @@ void sweep_mode(void) {
 	uint8_t *buffer;
 	bool transfer = false;
 
+	hackrf_ui_startSweepMode();
 	while(transceiver_mode() != TRANSCEIVER_MODE_OFF) {
 		// Set up IN transfer of buffer 0.
 		if ( usb_bulk_buffer_offset >= 16384 && phase == 1) {
@@ -157,4 +158,5 @@ void sweep_mode(void) {
 			blocks_queued = 0;
 		}
 	}
+	hackrf_ui_stopSweepMode();
 }
