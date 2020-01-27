@@ -13,7 +13,7 @@ void hackrf_ui_setLNAPower(bool _lna_on) __attribute__((weak));
 void hackrf_ui_setBBLNAGain(const uint32_t gain_db) __attribute__((weak));
 void hackrf_ui_setBBVGAGain(const uint32_t gain_db) __attribute__((weak));
 void hackrf_ui_setBBTXVGAGain(const uint32_t gain_db) __attribute__((weak));
-void hackrf_ui_startSweepMode(void);
-void hackrf_ui_stopSweepMode(void);
+void hackrf_ui_startSweepMode(void) __attribute__((weak));
+void hackrf_ui_stopSweepMode(void) __attribute__((weak));
 
 #endif
